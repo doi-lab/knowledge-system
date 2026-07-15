@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ナレッジ共有システム</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
+    <h1>📚 ナレッジ共有システム</h1>
+
+    <a href="/add" class="button">＋ ナレッジを追加</a>
+
+    <hr>
+
+    {% if data %}
+
+        {% for item in data %}
+
+        <div class="card">
+            <h2>{{ item[1] }}</h2>
+
+            <p>
+                <strong>カテゴリ：</strong>
+                {{ item[2] }}
+            </p>
+
+            <a href="/detail/{{ item[0] }}">詳細を見る</a>
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p>まだナレッジが登録されていません。</p>
+
+    {% endif %}
+
+</body>
+</html>

@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ナレッジ追加</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
+    <h1>ナレッジを追加</h1>
+
+    <form method="POST">
+
+        <label>タイトル</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label>カテゴリ</label><br>
+        <input type="text" name="category" required><br><br>
+
+        <label>内容</label><br>
+        <textarea name="content" rows="10" required></textarea><br><br>
+
+        <button type="submit">登録</button>
+
+    </form>
+
+    <br>
+
+    <a href="/">← 一覧へ戻る</a>
+
+</body>
+</html>

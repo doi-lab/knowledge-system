@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ item[1] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>{{ item[1] }}</h1>
+
+    <p><strong>カテゴリ：</strong> {{ item[2] }}</p>
+
+    <hr>
+
+    <p>{{ item[3] }}</p>
+
+    <br>
+
+    <a href="/">← 一覧へ戻る</a>
+
+</body>
+</html>
 
